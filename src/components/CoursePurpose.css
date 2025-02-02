@@ -1,0 +1,121 @@
+.course-purpose-page{
+ padding: 100px 40px;
+}
+
+.course-purpose {
+    position: relative;
+    width: 100%;
+    padding: 50px 20px;
+    margin: 0 auto;
+    background: url("https://static.wixstatic.com/media/df6cc5_9462d09bdaef46d383bde0d0fb4b4b6c~mv2.jpg") center/cover no-repeat;
+    max-width: 1200px;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  /* Overlay for better readability */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+  }
+  
+  /* Ensure text is above overlay */
+  .course-purpose-heading,
+  .points-container {
+    position: relative;
+    z-index: 2;
+    
+    margin: auto;
+    
+  }
+  
+  .course-purpose-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  /* Points container with two equal columns */
+  .points-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px 40px;
+  }
+  
+  /* Each column */
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 48%; /* Adjusting for two equal columns */
+  }
+  
+  /* Styling for each point */
+  .point {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  /* Diamond icon - Fixing size */
+  .diamond-icon {
+    color: #ffd700; /* Gold color */
+    font-size: 18px; /* Uniform size */
+    min-width: 18px;
+    height: 18px;
+  }
+  
+  /* Point text */
+  .point p {
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  /* 📌 Responsive Adjustments */
+  @media (max-width: 768px) {
+    .course-purpose {
+      padding: 30px 15px;
+    }
+  
+    .course-purpose-heading {
+      font-size: 2rem;
+    }
+  
+    .points-container {
+      flex-direction: column;
+      
+    }
+  
+    .column {
+      width: 100%; /* Full width in mobile */
+    }
+  
+    .point {
+      
+      padding: 12px;
+    }
+  
+    .diamond-icon {
+      font-size: 16px;
+      min-width: 16px;
+      height: 16px;
+    }
+  
+    .point p {
+      font-size: 0.9rem;
+    }
+  }
+  

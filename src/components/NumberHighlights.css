@@ -1,0 +1,137 @@
+/* Number Highlights Section */
+.number-highlights-section {
+  padding: 100px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.number-highlights-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns for desktop */
+  gap: 40px;
+  width: 100%;
+  max-width: 1400px;
+  text-align: center;
+  z-index: 2;
+}
+
+.highlight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 25px;
+  border-radius: 15px;
+  background: #ffffff; /* Clean white background */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.highlight-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.highlight-item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.highlight-item:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.highlight-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Subtle hover effect */
+}
+
+.highlight-number {
+  font-family: 'Mulish', sans-serif; /* Mulish font */
+  font-size: 48px; /* Slightly smaller font size for a professional look */
+  font-weight: bold;
+  color: #cd1719; /* Red color for emphasis */
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.highlight-item:hover .highlight-number {
+  color: #033672; /* Dark blue color on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.highlight-text {
+  font-family: 'Mulish', sans-serif; /* Mulish font for text */
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.highlight-item:hover .highlight-text {
+  color: #444; /* Slightly darker text on hover */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .number-highlights-container {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+      gap: 20px;
+  }
+
+  .highlight-item {
+      padding: 30px 20px;
+  }
+
+  .highlight-number {
+      font-size: 36px;
+  }
+
+  .highlight-text {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .number-highlights-container {
+      grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  .highlight-number {
+      font-size: 28px;
+  }
+
+  .highlight-text {
+      font-size: 12px;
+  }
+
+  .number-highlights-section {
+      padding: 50px 20px;
+  }
+}

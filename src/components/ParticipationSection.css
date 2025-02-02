@@ -1,0 +1,237 @@
+/* General Styles for the Section */
+.partcipation-full-section {
+  background: linear-gradient(to right, #f0f0f0, #d8d8d8); /* Light gray gradient */
+}
+
+/* Main container for the participation section */
+.participation-section {
+  width: 100%;
+  padding: 100px 30px; /* Center the section with some space */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Heading Styles */
+.section-heading {
+  font-size: 28px;
+  text-align: center;
+  color: #000; /* Black color */
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+/* Flex container for the sections */
+.participation-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  align-items: center; /* Center the content horizontally */
+}
+
+/* Box Styles for Each Section */
+.participation-box {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  width: 100%; /* Ensure the box takes the full width within container */
+  max-width: 800px; /* Limit the max width to keep the box size consistent */
+  transition: transform 0.3s ease-in-out;
+  text-align: left; /* Ensure text is left-aligned */
+}
+
+/* Hover effect for each box */
+.participation-box:hover {
+  transform: translateY(-8px);
+}
+
+/* Header Styles for Each Section */
+.participation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  color: #033672;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Details Styles */
+.participation-details {
+  padding-top: 12px;
+  font-size: 18px;
+  color: #555;
+  font-weight: bold;
+}
+
+/* Detail item list styles */
+.detail-item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+/* Icon styles for each detail item */
+.detail-icon {
+  color: #cd1719;
+  margin-right: 16px;
+  font-size: 8px; /* Smaller circle icon */
+}
+
+/* Additional Section styles */
+.additional-section h4 {
+  font-size: 19px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.plain-item {
+  font-size: 16px;
+  color: #555;
+  margin-left: 24px;
+}
+
+.plain-item::before {
+  content: '•';
+  font-size: 15px;
+  color: #cd1719;
+  margin-right: 10px;
+}
+
+/* Icon Styles for Plus/Minus */
+.FaPlus,
+.FaMinus {
+  color: #cd1719;
+  font-size: 22px;
+}
+
+/* Responsive Design Adjustments */
+
+/* Tablet and smaller screens */
+@media (max-width: 1024px) {
+
+  .section-heading {
+    font-size: 24px; /* Reduce heading size on smaller screens */
+  }
+
+  .participation-box {
+    max-width: 700px; /* Slightly smaller box size */
+    padding: 25px; /* Reduce padding */
+  }
+
+  .participation-header {
+    font-size: 18px; /* Adjust header font size */
+  }
+
+  .participation-details {
+    font-size: 16px; /* Reduce font size for details */
+  }
+
+  .detail-item {
+    font-size: 14px; /* Slightly smaller font for detail items */
+  }
+
+  .plain-item {
+    font-size: 14px; /* Smaller text for plain items */
+  }
+
+  .plain-item::before {
+    font-size: 14px; /* Smaller bullet size */
+    margin-right: 8px;
+  }
+
+  .FaPlus,
+  .FaMinus {
+    font-size: 18px; /* Smaller icon size for mobile */
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+
+  .section-heading {
+    font-size: 20px; /* Reduce heading size further for mobile */
+  }
+
+  .participation-box {
+    max-width: 90%; /* Allow boxes to take up more space on mobile */
+    padding: 20px; /* Reduced padding */
+  }
+
+  .participation-header {
+    font-size: 16px; /* Smaller font size for headers */
+  }
+
+  .participation-details {
+    font-size: 14px; /* Smaller font size for details */
+  }
+
+  .detail-item {
+    font-size: 12px; /* Even smaller font size for items */
+  }
+
+  .plain-item {
+    font-size: 12px; /* Even smaller text for plain items */
+  }
+
+  .plain-item::before {
+    font-size: 12px; /* Smaller bullet size */
+    margin-right: 6px;
+  }
+
+  .FaPlus,
+  .FaMinus {
+    font-size: 16px; /* Reduce icon size for smaller screens */
+  }
+  .participation-section {
+    padding: 70px 30px; /* Center the section with some space */
+  
+  }
+}
+
+/* Very small devices (phones) */
+@media (max-width: 480px) {
+
+  .section-heading {
+    font-size: 18px; /* Smallest heading size for very small screens */
+  }
+
+  .participation-box {
+    max-width: 100%; /* Take full width on very small screens */
+    padding: 15px; /* Further reduced padding */
+  }
+
+  .participation-header {
+    font-size: 14px; /* Adjust font size for mobile */
+  }
+
+  .participation-details {
+    font-size: 12px; /* Smaller font size for details */
+  }
+
+  .detail-item {
+    font-size: 10px; /* Smallest font size for items */
+  }
+
+  .plain-item {
+    font-size: 10px; /* Smallest text for plain items */
+  }
+
+  .plain-item::before {
+    font-size: 10px; /* Smallest bullet size */
+    margin-right: 4px;
+  }
+
+  .FaPlus,
+  .FaMinus {
+    font-size: 14px; /* Smallest icon size for small phones */
+  }
+  .participation-section {
+    padding: 50px 30px; /* Center the section with some space */
+  
+  }
+}

@@ -1,0 +1,114 @@
+.faq-section {
+    width: 100%;
+    padding: 100px 40px;
+    background: linear-gradient(to right, #f0f0f0, #d8d8d8);
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .faq-heading {
+    font-size: 2rem;
+    text-align: center;
+    color: #000;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .faq-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1400px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  
+  .faq-column {
+    width: 48%; /* Adjust to fit the two-column layout */
+  }
+  
+  .faq-item {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+  }
+  
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem; /* Adjusted for better readability */
+    background-color: #033672;
+    color: #fff;
+    cursor: pointer;
+    padding: 20px 20px 20px 30px;
+    border-radius: 8px;
+    width: 100%;
+    border: none;
+    gap: 40px;
+  }
+  
+  .faq-icon {
+    background-color: #fff;
+    color: #cd1719;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.2rem; /* Adjusted icon size */
+    transition: background-color 0.3s;
+  }
+  
+  .faq-icon.active {
+    background-color: #cd1719;
+    color: #fff;
+  }
+  
+  .faq-answer {
+    font-size: 1rem; /* Adjusted for better readability */
+    color: #555;
+    padding: 25px 35px;
+    background-color: #a8cafd;
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid #ddd;
+    font-weight: 700;
+    line-height: 1.8;
+  }
+  
+  .faq-answer p {
+    margin: 0;
+  }
+  
+  /* For responsive design */
+  @media (max-width: 1128px) {
+    .faq-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .faq-section {
+       
+        padding: 60px 40px;
+      }
+    .faq-column {
+      width: 100%;
+    }
+  
+    .faq-heading {
+      font-size: 1.8rem; /* Adjusted for mobile */
+    }
+  
+    .faq-question {
+      font-size: 1rem; /* Adjusted for mobile */
+    }
+  
+    .faq-icon {
+      font-size: 1rem; /* Adjusted for mobile */
+    }
+  
+    .faq-answer {
+      font-size: 0.9rem; /* Adjusted for mobile */
+      padding: 20px 30px; /* Reduced padding for mobile */
+    }
+  }
+  

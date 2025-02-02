@@ -1,0 +1,150 @@
+/* Full Section */
+.gallery-section {
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+/* Scrollable Container for Each Row */
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Image Row (Each row scrolls separately) */
+.image-row {
+  display: flex;
+  animation: scroll-left 20s linear infinite;
+  transition: animation 0.3s ease-in-out;
+}
+
+/* Different Scroll Speeds for Each Row */
+.scroll-container:nth-child(1) .image-row {
+  animation: scroll-left 80s linear infinite;
+}
+
+.scroll-container:nth-child(2) .image-row {
+  animation: scroll-left 100s linear infinite;
+}
+
+.scroll-container:nth-child(3) .image-row {
+  animation: scroll-left 120s linear infinite;
+}
+
+/* Pause scrolling on hover */
+.scroll-container:hover .image-row {
+  animation-play-state: paused;
+}
+
+/* Image Items */
+.image-item {
+  height: 180px;
+  overflow: hidden;
+  border: 5px solid #fff;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Different widths for each image */
+.image-item:nth-child(3n + 1) {
+  width: 200px;
+}
+
+.image-item:nth-child(3n + 2) {
+  width: 250px;
+}
+
+.image-item:nth-child(3n + 3) {
+  width: 220px;
+}
+
+/* Continuous scrolling */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .image-item {
+    height: 140px;
+  }
+
+  .image-item:nth-child(3n + 1) {
+    width: 160px;
+  }
+
+  .image-item:nth-child(3n + 2) {
+    width: 220px;
+  }
+
+  .image-item:nth-child(3n + 3) {
+    width: 190px;
+  }
+}
+
+/* Image Modal */
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  max-width: 80vw;
+  max-height: 80vh;
+  background: #111;
+  padding: 55px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Close Icon */
+.close-icon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.close-icon:hover {
+  color: red;
+}
+
+
+/* Modal Image */
+.modal img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border: 5px solid #fff;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+}

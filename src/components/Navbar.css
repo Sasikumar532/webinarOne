@@ -1,0 +1,461 @@
+/* Navbar styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 10px 20px;
+  }
+  
+  /* Logo */
+  .navbar-logo img {
+    height:auto; /* Adjust for responsive scaling */
+  cursor: pointer;
+  width: 250px;
+  }
+  
+  /* Desktop Navigation Links */
+  .navbar-links-desktop {
+    display: flex;
+    justify-content: center;
+    padding: 0px 20px;
+  }
+  
+  .navbar-links-desk {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: #212529;
+    font-size: 1em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .navbar-links-desk a:hover {
+    color: #007bff;
+    background-color: transparent; /* Keep background transparent */
+  }
+  
+  /* Social and Phone Block */
+ 
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icon {
+    font-size: 2em;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .whatsapp-icon {
+    background-color: #25d366;
+  }
+  
+  .telegram-icon {
+    background-color: #0088cc;
+  }
+  
+  .phone-number {
+    font-size: 1em;
+    color: #212529;
+    font-weight: bold;
+  }
+  
+  /* Language Selector */
+  .language-select-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+  }
+  
+  .language-select {
+    width: 50px; /* Adjust width for flag size */
+    height: 30px; /* Adjust height */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .language-select:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Menu Button */
+  .menu-button {
+    background: none;
+    border: none;
+    font-size: 2em; /* Same size for both the menu and close icon */
+    cursor: pointer;
+    z-index: 1000; /* Ensure the button stays above other elements */
+    color: #000000; /* Default black color */
+    transition: none; /* Disable any transition on click */
+  }
+  
+  /* Mobile Menu */
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    margin-top: 100px;
+    right: -100%;
+    width: 75%;
+    height: 100%;
+    background-color: #f8f9fa;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left; /* Align links to the left */
+    padding: 20px;
+    z-index: 1000;
+  }
+  
+  .navbar-menu.open {
+    right: 0;
+  }
+  
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    font-size: 12px;
+    margin-top: 30px;
+  }
+  .navbar-links-desk li{
+    cursor: pointer;
+  }
+  
+  .navbar-links a {
+    font-size: 12px;
+    padding: 12px;
+    width: 100%;
+    text-align: left;
+    color: #212529;
+    transition: color 0.3s ease; /* Only change color on hover */
+  }
+  
+  .navbar-links a:hover {
+    color: #007bff; /* Change text color */
+    background-color: transparent; /* Keep background transparent */
+  }
+  
+  /* Mobile Menu Header */
+  .navbar-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  
+  .close-icon {
+    font-size: 1em;
+    color: #000000;
+    cursor: pointer;
+    z-index: 10000;
+  }
+  .user-icon {
+    
+    font-size: 20px;
+    cursor: pointer;
+    color: #000000;
+    border-radius: 50%;
+    background-color: #000000;
+  }
+
+  .user-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Menu Button Styling */
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animated Menu Icon */
+.menu-icon {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-icon span {
+  width: 30px;
+  height: 4px;
+  background: black;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Open State: Transform Menu into X */
+.menu-button.open .menu-icon span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-button.open .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button.open .menu-icon span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* User Icon */
+/* User Icon */
+.user-icon {
+  position: relative;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+  margin-right: 20px;
+}
+
+/* User Dropdown */
+.user-dropdown {
+  position: absolute;
+  top: 80px;
+  right: 30px;
+  width: 200px;
+  max-height: 250px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  z-index: 100;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* User Dropdown Header */
+.user-dropdown-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.user-dropdown-icon {
+  font-size: 20px;
+  color: #007bff;
+}
+
+/* User Account Button */
+.user-account-btn {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.user-account-btn:hover {
+  background: #0056b3;
+}
+
+/* Divider */
+.user-divider {
+  height: 1px;
+  background: #ddd;
+  margin: 10px 0;
+}
+
+/* Contact Section */
+.user-dropdown .contact-section {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.user-dropdown .contact-section p {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.navbar-container .contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.whatsapp-icon {
+  color: white;
+  background-color:#25d366 ;
+  font-size: 40px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.telegram-icon {
+  color: white;
+  background-color: #0088cc;
+  font-size: 40px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-icon:hover, .telegram-icon:hover {
+  transform: scale(1.1);
+}
+
+
+  
+  
+  /* Responsive Design */
+  @media (min-width: 1024px) {
+    .navbar-menu {
+      display: none;
+    }
+  
+    .menu-button {
+      display: none;
+    }
+  
+    .navbar-extras {
+      display: flex;
+      gap: 60px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .navbar-container {
+      padding: 10px 20px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .navbar-logo img {
+      max-width: 100px;
+    }
+  
+    .navbar-links-desktop {
+      display: none;
+    }
+  
+    .navbar-extras {
+      display: none;
+    }
+  
+    .menu-button {
+      display: block;
+    }
+  
+    .navbar-menu-header {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  
+    .navbar-menu {
+      padding-top: 40px; /* Increased top padding for mobile menu links */
+    }
+  
+    .navbar-links a {
+      font-size: 1.4em; /* Increased font size for better readability on mobile */
+      padding: 14px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .navbar-container {
+      padding: 10px 20px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .navbar-logo img {
+      max-width: 100%;
+    }
+  
+    .navbar-links-desktop {
+      display: none;
+    }
+  
+    .navbar-extras {
+      display: none;
+    }
+  
+    .menu-button {
+      display: block;
+    }
+  
+    .navbar-menu-header {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  
+    .navbar-menu {
+      padding-top: 40px; /* Increased top padding for mobile menu links */
+    }
+  
+    .navbar-links a {
+      font-size: 1.4em; /* Increased font size for better readability on mobile */
+      padding: 14px;
+    }
+    .user-icon{
+      font-size: 18px;
+    } 
+  }
+  

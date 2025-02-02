@@ -1,0 +1,188 @@
+/* Overall footer styling */
+.footer {
+    background: linear-gradient(to right, #f0f0f0, #d8d8d8); /* Linear gradient background */
+    color: black; /* All text in black */
+    padding: 40px 0px;
+    text-align: center;
+  }
+  
+  /* Container for content within the footer */
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Footer row layout */
+  .footer-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  
+  /* Footer column layout */
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Footer logo and about the company section */
+  .logo-column .footer-logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .logo-column .footer-about {
+    font-size: 14px;
+    color: black; /* Text in black */
+  }
+  
+  /* Footer links section */
+  .footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin: 5px 0;
+  }
+  
+  .footer-links a {
+    color: black; /* Text color for links */
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-links a:hover {
+    color: #033672; /* Hover color for links */
+    text-decoration: underline;
+  }
+  
+  /* Footer social media icons */
+  .footer-social {
+    display: flex;
+    justify-content: start; /* Align icons horizontally */
+    gap: 15px; /* Add spacing between icons */
+    margin-top: 10px; /* Add space between the heading and icons */
+  }
+  
+  .footer-social a {
+    color: #033672; /* Default icon color */
+  }
+  
+  .footer-social a:hover {
+    color: #cd1719; /* Hover icon color */
+  }
+  
+  .footer-social svg {
+    width: 24px; /* Icon size */
+    height: 24px;
+  }
+  
+  /* Footer bottom (copyright) */
+  .footer-bottom {
+    margin-top: 20px;
+  }
+  
+  .footer-line {
+    width: 80%;
+    margin: 0 auto;
+    border-top: 1px solid #b2b2b2;
+    margin-bottom: 20px;
+  }
+  
+  .footer-bottom p {
+    font-size: 12px;
+    color: black; /* Text in black */
+  }
+  
+  /* Headings for each section */
+  .footer-heading {
+    font-size: 16px;
+    font-weight: bold;
+    color: black; /* Text color for headings */
+    margin-bottom: 10px;
+  }
+  
+  .footer-heading:hover {
+    color: #033672; /* Heading hover color */
+  }
+  
+  /* Mobile and Tablet Optimization */
+  @media screen and (max-width: 768px) {
+    .footer-row {
+      grid-template-columns: 1fr; /* Stack all columns vertically on mobile/tablets */
+      gap: 20px;
+    }
+  
+    .footer-logo {
+      width: 120px; /* Adjust logo size */
+    }
+  
+    .footer-links {
+      text-align: left; /* Align footer links to the left */
+    }
+  
+    .footer-social {
+      justify-content: flex-start; /* Align social media icons to the left */
+      margin-top: 10px; /* Add space between the heading and icons */
+    }
+  
+    .footer-bottom p {
+      font-size: 10px;
+    }
+  }
+  
+  /* Small Mobile Devices Optimization */
+  @media screen and (max-width: 480px) {
+    .footer-logo {
+      width: 100px; /* Adjust logo size for small screens */
+    }
+  
+    .footer-links a {
+      font-size: 12px; /* Smaller font size for very small screens */
+    }
+  
+    .footer-social a {
+      font-size: 18px; /* Adjust icon size for small screens */
+    }
+  
+    .footer-bottom p {
+      font-size: 8px; /* Adjust copyright font size for small screens */
+    }
+  
+    .footer-row {
+      gap: 10px; /* Reduce gap between columns */
+    }
+    .footer-container {
+        padding: 0 30px;
+      }
+  }
+  
+  /* Very Small Mobile Devices */
+  @media screen and (max-width: 375px) {
+    .footer-logo {
+      width: 80px; /* Further reduce logo size */
+    }
+  
+    .footer-links a {
+      font-size: 11px; /* Further reduce link size */
+    }
+  
+    .footer-social a {
+      font-size: 16px; /* Further reduce icon size */
+    }
+  
+    .footer-bottom p {
+      font-size: 7px; /* Even smaller font size for copyright */
+    }
+  
+    .footer-row {
+      gap: 10px; /* Reduce gap between columns */
+    }
+  }
+  
