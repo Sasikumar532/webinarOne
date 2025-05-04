@@ -64,11 +64,22 @@ const Navbar = () => {
   <span className="dropdown-toggle">О КУРСАХ</span>
   <ul className="dropdown-menu">
     <li>
-      <a onClick={(e) => handleScrollToSection(e, "#about-courses")}>О курсе</a>
+      <a onClick={(e) => handleScrollToSection(e, "#about-courses")}>Базовые курсы</a>
     </li>
     <li>
-      <a onClick={(e) => handleScrollToSection(e, "#more-details")}>Подробнее</a>
-    </li>
+  <a 
+    href="https://basic.eafo.info" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    onClick={(e) => {
+      e.preventDefault(); // Prevent default link behavior
+      handleScrollToSection(e, "#more-details");
+      window.open("https://basic.eafo.info", "_blank");
+    }}
+  >
+    Прекурс
+  </a>
+</li>
   </ul>
 </li>
 

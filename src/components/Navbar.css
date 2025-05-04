@@ -66,9 +66,11 @@
 /* Dropdown toggle looks like a link */
 .dropdown-toggle {
   cursor: pointer;
-  padding: 10px;
   display: block;
   color: #000; /* Or your desired color */
+}
+.dropdown-toggle:hover{
+  color: #033773;
 }
 
 /* Dropdown menu styling */
@@ -94,6 +96,7 @@
 
 .dropdown-menu li:hover {
   background-color: #f5f5f5;
+  color: #033773;
 }
 
 /* Show dropdown on hover */

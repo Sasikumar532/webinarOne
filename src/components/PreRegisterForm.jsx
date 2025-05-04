@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import "./PreRegisterForm.css";
 
-const baseUrl = "http://localhost:4000";
+const baseUrl = "https://testapi.eafo.info";
 
 export default function PreRegisterForm({ courseId, onClose }) {
   const modalRef = useRef(null);
