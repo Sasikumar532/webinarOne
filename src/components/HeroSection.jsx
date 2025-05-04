@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./HeroSection.css";
 import {FaVk} from 'react-icons/fa'; // Importing social media icons from React Icons
+import PreRegisterForm from "./PreRegisterForm";
 const HeroSection = () => {
+  const [showForm, setShowForm] = useState(false);
+
   return (
     <section className="hero-section">
-      {/* Full-width Background */}
+      
       <div className="hero-bg">
         {/* Overlay */}
         <div className="hero-overlay"></div>
@@ -54,7 +57,8 @@ const HeroSection = () => {
     {/* Registration Button */}
     <button
         className="registration-button same-width-button"
-        onClick={() => window.open("https://ui.eafo.info", "_blank")}
+        onClick={() => setShowForm(true)}
+
     >
         Регистрация
     </button>
@@ -71,6 +75,9 @@ const HeroSection = () => {
 
         </div>
       </div>
+
+
+      {showForm && <PreRegisterForm courseId="67fb8bc722a71bd3d19d580d" onClose={() => setShowForm(false)} />}
       
     </section>
   );

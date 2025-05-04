@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from "react";
 import './AboutCourses.css';
+import PreRegisterForm from "./PreRegisterForm";
 
 const AboutCourses = () => {
+    const [showForm, setShowForm] = useState(false);
+  
   return (
     <section className="about-courses-section" id='about-courses'>
       <div className="about-courses-container">
@@ -45,10 +48,11 @@ const AboutCourses = () => {
 >
   ПРОГРАММА ПРЕКУРСА
 </button>
-            <button className="registration-button" onClick={() => window.open("https://ui.eafo.info", "_blank")} >РЕГИСТРАЦИЯ</button>
+            <button className="registration-button"  onClick={() => setShowForm(true)} >РЕГИСТРАЦИЯ</button>
           </div>
         </div>
       </div>
+      {showForm && <PreRegisterForm courseId="67fb8bc722a71bd3d19d580d" onClose={() => setShowForm(false)} />}
     </section>
   );
 };

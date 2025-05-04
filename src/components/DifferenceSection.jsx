@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from "react";
 import './DifferenceSection.css';
+import PreRegisterForm from "./PreRegisterForm";
 
 const DifferenceSection = () => {
+
+    const [showForm, setShowForm] = useState(false);
+  
   return (
     <section className="difference-section" id="course-difference">
       <div className="difference-container">
@@ -42,7 +46,7 @@ const DifferenceSection = () => {
           <p className='info'>* Оплачиваемая первая, вторая или третья ординатура по любой специальности в РФ на выбор</p>
 
           <div className="difference-buttons">
-                        <button className="registration-button" onClick={() => window.open("https://ui.eafo.info", "_blank")} >РЕГИСТРАЦИЯ</button>
+                        <button className="registration-button"  onClick={() => setShowForm(true)} >РЕГИСТРАЦИЯ</button>
           </div>
         </div>
 
@@ -54,6 +58,8 @@ const DifferenceSection = () => {
           />
         </div>
       </div>
+
+      {showForm && <PreRegisterForm courseId="67fb8bc722a71bd3d19d580d" onClose={() => setShowForm(false)} />}
     </section>
   );
 };
