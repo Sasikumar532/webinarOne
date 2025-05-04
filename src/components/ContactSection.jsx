@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
+import { FaTelegramPlane, FaWhatsapp, FaVk } from "react-icons/fa";
 import "./ContactSection.css";
 
 const ContactSection = () => {
@@ -47,7 +47,7 @@ const ContactSection = () => {
             onChange={(e) => setIsChecked(e.target.checked)}
           />
           <label htmlFor="privacy-policy">
-            Я соглашаюсь с <a href="/privacy-policy" className="privacy-link">политикой конфиденциальности EAFO</a>
+            Я соглашаюсь с <a href="https://www.eafo.info/privacy-policy" target="_blank" className="privacy-link">политикой конфиденциальности EAFO</a>
           </label>
         </div>
 
@@ -70,14 +70,11 @@ const ContactSection = () => {
 
       {/* Contact Info */}
       <div className="contact-info">
-        <p>Телефон: <a href="tel:+1234567890" className="custom-link">+1234567890</a></p>
-        <p>Электронная почта: <a href="mailto:info@example.com" className="custom-link">info@example.com</a></p>
+        <p>Телефон: <a href="tel:+7 (931) 111-22-55" className="custom-link">+7 (931) 111-22-55</a></p>
+        <p>Электронная почта: <a href="mailto:basic@eafo.info" className="custom-link">basic@eafo.info</a></p>
         <div className="contact-buttons">
-  <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="contact-button telegram">
-    <FaTelegramPlane className="contact-icon" />
-  </a>
-  <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="contact-button whatsapp">
-    <FaWhatsapp className="contact-icon" />
+     <a href="https://vk.com/basic.eafo" target="_blank" rel="noopener noreferrer" className="contact-button vk-button">
+    <FaVk className="contact-icon" />
   </a>
 </div>
 

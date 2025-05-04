@@ -1,0 +1,94 @@
+import React from 'react';
+import Slider from 'react-slick';
+import './FacultySection.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+const FacultySection = () => {
+  const facultyMembers = [
+    {
+      name: "ДРУЙ Александр Евгеньевич",
+      description: "к.м.н., Врач клинической лабораторной диагностики",
+      image: "https://static.wixstatic.com/media/df6cc5_081e86a01b2f4700a6555555d179bfc9~mv2.jpg"
+    },
+    {
+      name: "СУБРАМАНИАН Сомасундарам",
+      description: "хирург, онколог, онкопластический хирург",
+      image: "https://static.wixstatic.com/media/992e52_a78fd51fffd041b7b6a9b7179cb8b5f0~mv2.jpg"
+    },
+    {
+      name: "",
+      description: "к.м.н., Врач клинической лабораторной диагностики",
+      image: "https://static.wixstatic.com/media/df6cc5_3b2678bf2c8049da8f375596e3e83f5c~mv2.jpg"
+    },
+    {
+      name: "СУБРАМАНИАН Сомасундарам",
+      description: "хирург, онколог, онкопластический хирург",
+      image: "https://static.wixstatic.com/media/992e52_a78fd51fffd041b7b6a9b7179cb8b5f0~mv2.jpg"
+    },
+    
+  ];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 4, // Default for larger screens
+    slidesToScroll: 1,
+    prevArrow: <div className="slick-arrow slick-prev">←</div>,
+    nextArrow: <div className="slick-arrow slick-next">→</div>,
+    responsive: [
+      {
+        breakpoint: 1024, // Medium devices (Tablets, Small Laptops)
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768, // Small devices (Mobile Phones)
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 450, // Extra Small devices (Smaller Phones)
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  return (
+    <section className="faculty-section" id="faculty">
+      <div className="faculty-container">
+        <div className="faculty-text">
+          <h2 className="faculty-header">ЭКСПЕРТЫ</h2>
+        </div>
+
+        {/* Faculty Carousel with Grid layout */}
+        <div className="faculty-carousel">
+          <Slider {...settings}>
+            {facultyMembers.map((faculty, index) => (
+              <div key={index} className="faculty-slide">
+                <div className="faculty-card">
+                  <div className="faculty-image-container">
+                    <img src={faculty.image} alt={faculty.name} className="faculty-image" />
+                  </div>
+                  <div className="faculty-info">
+                    <h3 className="faculty-name">{faculty.name}</h3>
+                    <p className="faculty-description">{faculty.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default FacultySection;

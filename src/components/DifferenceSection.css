@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 20px;
+    padding: 60px 20px;
     background-color: #f5f3f3;
   }
   
@@ -43,10 +43,10 @@
   }
   
   .difference-header {
-    font-family: 'Bodoni', serif;
+  
     font-size: 28px;
     line-height: 1.4;
-    color: #000;
+    color: #033672;
     margin-bottom: 20px;
     position: relative;
   }
@@ -54,7 +54,7 @@
   .difference-header span {
     font-size: 24px;
     font-weight: 400;
-    color: #000;
+    color: #033672;
     font-weight: bolder;
   }
   

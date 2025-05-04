@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 20px;
+  padding: 60px 20px;
 }
 
 .about-courses-container {
@@ -12,6 +12,11 @@
   max-width: 1400px;
   align-items: center;
   gap: 120px;
+}
+
+.about-courses-container .sub-heading{
+font-weight:bold;
+font-size:20px;
 }
 
 .about-courses-image {
@@ -40,10 +45,10 @@
 }
 
 .about-courses-header {
-  font-family: 'Bodoni', serif;
+  
   font-size: 28px;
   line-height: 1.4;
-  color: #000;
+  color: #033672;
   margin-bottom: 20px;
   position: relative;
 }
@@ -51,7 +56,7 @@
 .about-courses-header span {
   font-size: 26px;
   font-weight: 400;
-  color: #000;
+  color:#033672;
   font-weight: bolder;
 }
 
@@ -87,7 +92,9 @@
 .about-courses-description li{
   margin-bottom: 15px;
 }  
-
+.about-courses-description li span{
+font-weight:bold;
+}
 .about-courses-buttons {
   display: flex;
   gap: 20px;

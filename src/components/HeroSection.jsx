@@ -1,25 +1,28 @@
 import React from "react";
 import "./HeroSection.css";
-
+import {FaVk} from 'react-icons/fa'; // Importing social media icons from React Icons
 const HeroSection = () => {
   return (
     <section className="hero-section">
       {/* Full-width Background */}
       <div className="hero-bg">
         {/* Overlay */}
-        <div className="overlay"></div>
+        <div className="hero-overlay"></div>
 
         {/* Content Container */}
         <div className="hero-content">
           {/* Title */}
           <div className="hero-title">
-            <h1>XI EAFO Базовые курсы</h1>
+            <h1>XI EAFO Базовые медицинские курсы</h1>
           </div>
 
           {/* Subtitle */}
           <div className="hero-subtitle">
             <p>Прекурс</p>
-            <h2>Основы Онкологии и Онкопатологии</h2>
+            <h2>Основы oнкологии и oнкопатологии</h2>
+          </div>
+          <div className="hero-date">
+            <p>4 Февраля - 29 Апреля 2025 года</p>
           </div>
 
           {/* Information Boxes */}
@@ -46,9 +49,26 @@ const HeroSection = () => {
           </div>
 
           {/* Date */}
-          <div className="hero-date">
-            <p>4 Февраля - 29 Апреля 2025 года</p>
-          </div>
+                
+          <div className="hero-section-buttons">
+    {/* Registration Button */}
+    <button
+        className="registration-button same-width-button"
+        onClick={() => window.open("https://ui.eafo.info", "_blank")}
+    >
+        Регистрация
+    </button>
+
+    {/* VK Button */}
+    <button
+        className="vk-btn same-width-button"
+        onClick={() => window.open("https://ui.eafo.info", "_blank")}
+    >
+        Личный кабинет
+        
+    </button>
+</div>
+
         </div>
       </div>
       

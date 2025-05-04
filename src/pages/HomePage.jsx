@@ -13,7 +13,7 @@ import DifferenceSection from '../components/DifferenceSection';
 import CourseProgram from '../components/CourseProgram';
 import CoursePurpose from '../components/CoursePurpose';
 import ScrollToTopButton from '../components/ScrollToTopButton';
-
+import ContactUs from '../components/ContactUs'
 
 const HomePage = () => {
   return <div>
@@ -22,10 +22,12 @@ const HomePage = () => {
     <DifferenceSection/>
     <ProgramSection/>
     <CourseProgram/>
+    <FacultySection/>
     <MasonryGallery/>
     <CoursePurpose/>
     <PartnerLogos/>
     <ContactSection/>
+    <ContactUs/>
     
   </div>;
 };

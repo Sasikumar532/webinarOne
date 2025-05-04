@@ -1,53 +1,28 @@
-.vertical-timeline .vertical-timeline-element:before {
-  /* Animation for drawing the timeline line */
-  animation: drawLine 2s ease-in-out forwards;
+.timeline-date-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-align:center;
 }
 
-/* Align left-side dates correctly */
-.vertical-timeline-element--left .timeline-date {
-  text-align: right !important;
-  display: block;
-  margin-right: 10px;
-}
-
-/* Align right-side dates correctly */
-.vertical-timeline-element--right .timeline-date {
-  text-align: left !important;
-  display: block;
-  margin-left: 10px;
-}
-
-
-@keyframes drawLine {
-  from {
-    height: 0;
-  }
-  to {
-    height: 100%;
-  }
-}
-.program-section {
-  background-color: #f9f9f9; /* Light background for the section */
-  padding: 50px 0;
-}
-
-.program-container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
+.vertical-timeline-element-content .vertical-timeline-element-date {
+  float: center;
+  padding: .8em 0;
+  font-size:20px;
+  color:#fff;
+  text-align:center;  
   
 }
-
-.program-header {
-  font-size: 36px;
+.timeline-container h3{
+color:#fff
+}
+.custom-date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
   font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
+  font-size: 1.2rem;
 }
 
-.schedule-heading {
-  font-size: 24px;
-  color: #555;
-  margin-bottom: 40px;
-}

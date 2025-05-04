@@ -5,14 +5,13 @@ import './PartnerLogos.css';
 const PartnerLogos = () => {
   return (
     <div className='partner-logos-section' id='partners'>
- 
     <div className="partner-logos-container">
       <h2 className="partner-logos-heading">Наши партнеры</h2>
       <div className="logos-container">
         <div className="logos-wrapper">
           {/* Existing logos */}
-         <img src="https://static.wixstatic.com/media/992e52_1186d047c702453e888e69292ddb1282~mv2.png" className="logo"/>
-          <img src="https://static.wixstatic.com/media/e6f22e_4365cbc96859456682971bc081e8f938~mv2.png" className="logo"/>
+         <img src="https://static.wixstatic.com/media/992e52_1186d047c702453e888e69292ddb1282~mv2.png" className="logo" style={{height:"50px"}}/>
+          <img src="https://static.wixstatic.com/media/e6f22e_4365cbc96859456682971bc081e8f938~mv2.png" className="logo" style={{}}/>
           <img src="https://static.wixstatic.com/media/e6f22e_fdcb658ef9ee4f718cca491d457c3b53~mv2.png"  className="logo"/>
           <img src="https://static.wixstatic.com/media/e6f22e_3e000f82d80b4c61a07548791189a765~mv2.png" className="logo"/>
           <img src="https://static.wixstatic.com/media/e6f22e_c6be80083cbc4ea1bf104f638dc7e4c2~mv2.png" className="logo"/>

@@ -1,175 +1,279 @@
+/* Base styling */
 .course-program {
-    width: 100%;
-    max-width: 1400px; /* Max width for the page */
-    margin: 0 auto; /* Centers the main container */
-    padding: 40px;
-  }
-  
-  .course-heading {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 30px;
-    font-weight: bold;
-  }
-  .course-sub-header-content{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #eae8e8;
-    
-  }
-  .course-sub-header-content .course-conunter{
-    text-align: center;
-  }
-  .course-sub-header-content .course-conunter h1{
-    font-weight: bolder;
-    font-size: 30px;
-  }
-  
-  .box-container {
-    display: flex;
-    flex-direction: column; /* Align the main dropdowns vertically (in a column) */
-    gap: 20px;
-  }
-  
-  .div-box {
-    width: 100%; /* Ensure div-box takes full width of its container */
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    cursor: pointer;
-    background-color: #033672;
-  }
-  
-  .div-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-  }
-  
-  .left-side h3 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #fff;
-    font-weight: bold;
-  }
-  
-  .right-side .arrow-icon {
-    transition: transform 0.3s ease;
-    font-size: 20px;
-    font-weight: bold; /* Make the icon appear bold */
-    color: #fff;
-  }
-  
-  .arrow-icon.rotate {
-    transform: rotate(180deg);
-  }
-  
-  .dropdown-content {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #033672;
-    border-radius: 8px;
-  }
-  
-  .sub-dropdown {
-    margin-bottom: 15px;
-    padding: 20px;
-    background-color: #08274a;
-    border-radius: 8px;
-    cursor: pointer;
-    color: #fff;
-    
-  }
-  
-  .sub-dropdown:hover {
-    background-color: #09213b;
-  }
-  
-  .sub-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%; /* Ensures that the header content spans the entire width */
-  }
-  
-  .sub-left h4 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #fff;
-    font-weight: bold;
-  }
-  
-  .sub-right {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  .sub-content-right h1{
+  width: 100%;
+  max-width: 1400px; /* Max width for the page */
+  margin: 0 auto; /* Centers the main container */
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.course-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
   font-weight: bold;
-  }
-  
-  .sub-right .arrow-icon {
-    font-size: 18px;
-    transition: transform 0.3s ease;
-  }
-  
-  .sub-dropdown-content {
-    display: flex;
-    margin-top: 20px;
-  }
-  
-  .sub-content {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
-  
-  .sub-content-left img {
-    width: 150px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  .sub-content-right {
-    flex: 1;
-  }
-  
-  .expand {
-    cursor: pointer;
-    margin-top: 10px;
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  .expand-arrow {
-    font-size: 20px;
-  }
-  
-  .expand-content {
-    margin-top: 20px;
-    background-color: #f1f1f1;
-    padding: 15px;
-    border-radius: 8px;
-  }
-  .regsiter-btn-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-  .regsiter-btn-container button{
-    padding: 10px 20px;
-    border-radius: 10px;
+}
+
+.course-sub-header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: #eae8e8;
+  gap:50px
+}
+
+.course-sub-header-content .course-conunter {
+  text-align: center;
+}
+
+.course-sub-header-content .course-conunter h1 {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: column; /* Align the main dropdowns vertically (in a column) */
+  gap: 20px;
+}
+
+.div-box {
+  width: 100%; /* Ensure div-box takes full width of its container */
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #033672;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.div-box:hover {
+  background-color: #021e3d;
+}
+
+.div-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-side h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.right-side .arrow-icon {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #033672;
+  border-radius: 8px;
+}
+
+.sub-dropdown {
+  margin-bottom: 15px;
+  padding: 20px;
+  background-color: #08274a;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.sub-dropdown:hover {
+  background-color: #09213b;
+}
+
+.sub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Ensures that the header content spans the entire width */
+}
+
+.sub-left h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.sub-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.sub-content-right h1 {
+  font-weight: bold;
+}
+
+.sub-right .arrow-icon {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.sub-dropdown-content {
+  display: flex;
+  margin-top: 20px;
+}
+
+.sub-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.sub-content-left img {
+  width: 150px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.sub-content-right {
+  flex: 1;
+}
+
+.expand {
+  cursor: pointer;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.expand-arrow {
+  font-size: 20px;
+}
+
+.expand-content {
+  margin-top: 20px;
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.regsiter-btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.regsiter-btn-container button {
+  padding: 20px 40px;
+  border-radius: 10px;
+  background-color: #cd1719;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.regsiter-btn-container button:hover {
+  background-color: #cd1719;
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media (max-width: 1024px) {
+  .course-heading {
+    font-size: 1.8rem; /* Smaller font size for medium screens */
   }
 
-  
+  .course-sub-header-content {
+    
+    padding: 15px; /* Adjust padding */
+  }
+
+  .div-header {
+    flex-direction: row; /* Stack div-header items */
+    align-items: flex-start;
+    padding:10px;
+  }
+
+  .left-side h3 {
+    font-size: 1.4rem;
+  }
+
+  .div-box {
+    padding: 15px; /* Reduce padding */
+  }
+
+  .sub-header {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .sub-left h4 {
+    font-size: 1.1rem;
+  }
+
+  .sub-content-left img {
+    width: 120px;
+    height: 150px; /* Resize images */
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+
+ .course-program{
+
+padding:20px;
+}
+  .course-heading {
+    font-size: 1.5rem; /* Smaller font size on mobile */
+  }
+
+  .course-sub-header-content {
+    padding: 10px; /* More compact layout */
+  }
+
+  .div-box {
+    padding: 10px; /* Less padding on mobile */
+  }
+
+  .sub-dropdown {
+    padding: 10px; /* More compact sub-dropdown */
+  }
+.sub-content{
+flex-direction:column;
+}
+
+  .sub-content-left img {
+    width: 100px;
+    height: 120px; /* Adjust image size */
+  }
+
+
+.dropdown-content{
+padding:10px;
+}
+}
+.no-content-message {
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin: 10px 0;
+}

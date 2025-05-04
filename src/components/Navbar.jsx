@@ -53,7 +53,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="navbar-logo">
           <a href="/">
-            <img src="src/assets/eafo_logo.png" alt="EAFO Logo" />
+            <img src="https://static.wixstatic.com/media/e6f22e_a90a0fab7b764c24805e7e43d165d416~mv2.png" alt="EAFO Logo" />
           </a>
         </div>
 
@@ -61,22 +61,22 @@ const Navbar = () => {
         <div className="navbar-links-desktop">
           <ul className="navbar-links-desk">
             <li>
-              <a  onClick={(e) => handleScrollToSection(e, "#about-courses")}>О курсах</a>
+              <a  onClick={(e) => handleScrollToSection(e, "#about-courses")}>О КУРСАХ</a>
             </li>
             <li>
               <a  onClick={(e) => handleScrollToSection(e, "#schedule")}>РАСПИСАНИЕ</a>
             </li>
             <li>
-              <a  onClick={(e) => handleScrollToSection(e, "#")}>ЭКСПЕРТЫ</a>
-            </li>
-            <li>
               <a  onClick={(e) => handleScrollToSection(e, "#program")}>ПРОГРАММА</a>
+            </li>
+             <li>
+              <a  onClick={(e) => handleScrollToSection(e, "#faculty")}>ЭКСПЕРТЫ</a>
+            </li>
+             <li>
+              <a  onClick={(e) => handleScrollToSection(e, "#gallery")}>ГАЛЕРЕЯ</a>
             </li>
             <li>
               <a  onClick={(e) => handleScrollToSection(e, "#for-whom")}> ДЛЯ КОГО?</a>
-            </li>
-            <li>
-              <a  onClick={(e) => handleScrollToSection(e, "#cost")}>НАГРАДЫ</a>
             </li>
             <li>
               <a  onClick={(e) => handleScrollToSection(e, "#partners")}>ПАРТНЕРЫ</a>
@@ -124,34 +124,51 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`navbar-menu ${menuOpen ? "open" : ""}`}>
-        <ul className="navbar-links">
-          <li>
-            <a href="#about-courses" onClick={(e) => handleScrollToSection(e, "#about-courses")}>О КУРСАХ</a>
-          </li>
-          <li>
-            <a href="#schedule" onClick={(e) => handleScrollToSection(e, "#schedule")}>РАСПИСАНИЕ </a>
-          </li>
-          <li>
-            <a href="#" onClick={(e) => handleScrollToSection(e, "#")}>ЭКСПЕРТЫ</a>
-          </li>
-          <li>
-            <a href="#program" onClick={(e) => handleScrollToSection(e, "#program")}>ПРОГРАММА</a>
-          </li>
-          <li>
-            <a href="#for-whom" onClick={(e) => handleScrollToSection(e, "#for-whom")}>ДЛЯ КОГО?</a>
-          </li>
-          <li>
-            <a href="#cost" onClick={(e) => handleScrollToSection(e, "#cost")}>НАГРАДЫ</a>
-          </li>
-          <li>
-            <a href="#partners" onClick={(e) => handleScrollToSection(e, "#partners")}>ПАРТНЕРЫ</a>
-          </li>
-          <li>
-            <a href="#contact" onClick={(e) => handleScrollToSection(e, "#contact")}>СВЯЗАТЬСЯ С НАМИ</a>
-          </li>
-        </ul>
-      </div>
+<div className={`navbar-menu ${menuOpen ? "open" : ""}`}>
+  <button
+    onClick={() => window.location.href = 'https://ui.eafo.info'}
+    style={{
+      backgroundColor: '#033672',
+      color: '#fff',
+      padding: '10px 20px',
+      border: 'none',
+      borderRadius: '5px',
+      cursor: 'pointer',
+      fontWeight: 'bold',
+      transition: 'background 0.3s'
+    }}
+    onMouseEnter={(e) => e.target.style.backgroundColor = '#033672'}
+    onMouseLeave={(e) => e.target.style.backgroundColor = '#033672'}
+  >
+    ЛИЧНЫЙ КАБИНЕТ
+  </button>
+  <ul className="navbar-links">
+    <li>
+      <a onClick={(e) => handleScrollToSection(e, "#about-courses")}>О КУРСАХ</a>
+    </li>
+    <li>
+      <a onClick={(e) => handleScrollToSection(e, "#schedule")}>РАСПИСАНИЕ </a>
+    </li>
+    <li>
+      <a onClick={(e) => handleScrollToSection(e, "#program")}>ПРОГРАММА</a>
+    </li>
+    <li>
+      <a onClick={(e) => handleScrollToSection(e, "#faculty")}>ЭКСПЕРТЫ</a>
+    </li>
+    <li>
+      <a onClick={(e) => handleScrollToSection(e, "#gallery")}>ГАЛЕРЕЯ</a>
+    </li>
+    <li>
+      <a onClick={(e) => handleScrollToSection(e, "#for-whom")}>ДЛЯ КОГО?</a>
+    </li>
+    <li>
+      <a onClick={(e) => handleScrollToSection(e, "#partners")}>ПАРТНЕРЫ</a>
+    </li>
+    <li>
+      <a onClick={(e) => handleScrollToSection(e, "#contact")}>СВЯЗАТЬСЯ С НАМИ</a>
+    </li>
+  </ul>
+</div>
     </nav>
   );
 };

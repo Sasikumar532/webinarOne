@@ -1,7 +1,7 @@
 /* General Styles for Partner Logos Section */
 .partner-logos-section {
     width: 100%;
-    padding: 50px 20px;
+    padding: 20px 20px;
     margin: 0 auto;
     border-radius: 10px;
 }
@@ -10,7 +10,7 @@
 .partner-logos-container {
     width: 100%;
     max-width: 1400px;
-    padding: 50px 20px;
+    padding: 20px 20px;
     border-radius: 10px;
     font-family: Arial, sans-serif;
     margin: 0 auto;
@@ -21,7 +21,7 @@
     font-size: 34px;
     text-align: center;
     color: #000; /* Blue color */
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
@@ -29,38 +29,22 @@
 .logos-container {
     width: 100%;
     overflow: hidden;
-    padding: 100px 0;
+    padding: 50px 0;
     position: relative;
     /* Ensure blur effect only applies to visible portion */
 }
 
-.logos-container::before,
-.logos-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 30px;
-    height: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-    z-index: 1;
-}
-
-.logos-container::after {
-    right: 0;
-    transform: rotate(180deg);
-    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-}
 
 /* Logos wrapper for infinite scrolling */
 .logos-wrapper {
     display: flex;
     gap: 100px; /* Adjusted gap for larger screens */
-    animation: scroll-left 15s linear infinite; /* Adjusted speed */
+    animation: scroll-left 30s linear infinite; /* Adjusted speed */
     padding-left: 10px;
 }
 
 .logo {
-    height: 60px; /* Consistent size for logos */
+    height: 50px; /* Consistent size for logos */
     opacity: 0.8;
     transition: opacity 0.1s ease;
     flex-shrink: 0; /* Prevent logos from shrinking */
@@ -74,7 +58,7 @@
 /* Animation for infinite scrolling */
 @keyframes scroll-left {
     0% {
-        transform: translateX(-10%);
+        transform: translateX(0%);
     }
     25% {
         transform: translateX(-20%);
@@ -104,12 +88,12 @@
 
     /* Adjusting gap for medium-sized devices */
     .logos-wrapper {
-        gap: 50px; /* Decreased gap between logos for medium devices */
-        animation: scroll-left 18s linear infinite; /* Slower animation */
+        gap: 20px; /* Decreased gap between logos for medium devices */
+        animation: scroll-left 30s linear infinite; /* Slower animation */
     }
 
     .logo {
-        height: 50px; /* Slightly smaller logo size */
+        height: 40px; /* Slightly smaller logo size */
     }
 }
 
@@ -121,7 +105,7 @@
     /* Further adjust gap for small screens */
     .logos-wrapper {
         gap: 30px; /* Smaller gap on smaller screens */
-        animation: scroll-left 20s linear infinite; /* Slower animation on smaller screens */
+        animation: scroll-left 30s linear infinite; /* Slower animation on smaller screens */
     }
 
     .logo {
@@ -130,7 +114,7 @@
 
     /* Ensuring the logos fit inside the viewport without overflow */
     .logos-container {
-        padding: 50px 10px; /* Reduced padding on small devices */
+        padding: 20px 10px; /* Reduced padding on small devices */
     }
 }
 
@@ -141,21 +125,21 @@
 
     /* Adjusting the animation speed for very small screens */
     .logos-wrapper {
-        gap: 30px;
-        animation: scroll-left 25s linear infinite; /* Slow animation for mobile */
+        gap: 10px;
+        animation: scroll-left 30s linear infinite; /* Slow animation for mobile */
     }
 
     .logo {
-        height: 30px; /* Very small logo size for mobile */
+        height: 40px; /* Very small logo size for mobile */
     }
     .partner-logos-section {
        
-        padding: 30px 10px;
+        padding: 20px 10px;
         margin: 0 auto;
         
     }
     .partner-logos-container {
         
-        padding: 30px 10px;
+        padding: 20px 10px;
     }
 }
