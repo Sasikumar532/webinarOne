@@ -209,7 +209,7 @@ export default function PreRegisterForm({ courseId, onClose }) {
   </form>
 ) : (
   <div className="success-message">
-    <h3 style={{ marginTop: "1rem" }}>Вы успешно зарегистрировались на предварительный курс!</h3>
+    <h3 style={{ marginTop: "1rem" }}>Пре-Регистрация на XI EAFO Базовые медицинские курсы</h3>
     <p style={{ marginTop: "0.5rem", fontSize: "15px" }}>
       Мы отправили вам письмо с инструкциями по дальнейшей регистрации.<br />
       Письмо отправлено с адреса: <strong>eafo@e-register.org</strong>.<br />
