@@ -60,9 +60,18 @@ const Navbar = () => {
         {/* Desktop Navigation Links */}
         <div className="navbar-links-desktop">
           <ul className="navbar-links-desk">
-            <li>
-              <a  onClick={(e) => handleScrollToSection(e, "#about-courses")}>О КУРСАХ</a>
-            </li>
+          <li className="dropdown">
+  <span className="dropdown-toggle">О КУРСАХ</span>
+  <ul className="dropdown-menu">
+    <li>
+      <a onClick={(e) => handleScrollToSection(e, "#about-courses")}>О курсе</a>
+    </li>
+    <li>
+      <a onClick={(e) => handleScrollToSection(e, "#more-details")}>Подробнее</a>
+    </li>
+  </ul>
+</li>
+
             <li>
               <a  onClick={(e) => handleScrollToSection(e, "#schedule")}>РАСПИСАНИЕ</a>
             </li>
@@ -143,9 +152,18 @@ const Navbar = () => {
     ЛИЧНЫЙ КАБИНЕТ
   </button>
   <ul className="navbar-links">
+  <li className="dropdown">
+  <span className="dropdown-toggle">О КУРСАХ</span>
+  <ul className="dropdown-menu">
     <li>
-      <a onClick={(e) => handleScrollToSection(e, "#about-courses")}>О КУРСАХ</a>
+      <a onClick={(e) => handleScrollToSection(e, "#about-courses")}>О курсе</a>
     </li>
+    <li>
+      <a onClick={(e) => handleScrollToSection(e, "#more-details")}>Подробнее</a>
+    </li>
+  </ul>
+</li>
+
     <li>
       <a onClick={(e) => handleScrollToSection(e, "#schedule")}>РАСПИСАНИЕ </a>
     </li>
