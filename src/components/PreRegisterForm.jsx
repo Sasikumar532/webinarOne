@@ -6,12 +6,15 @@ import { AiOutlineClose } from "react-icons/ai";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 import "./PreRegisterForm.css";
 
 const baseUrl = "https://testapi.eafo.info";
 
 export default function PreRegisterForm({ courseId, onClose }) {
   const modalRef = useRef(null);
+  const [loading, setLoading] = useState(false);
+
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -52,6 +55,8 @@ export default function PreRegisterForm({ courseId, onClose }) {
       return;
     }
   
+    setLoading(true); // Start loading
+  
     try {
       const res = await axios.post(`${baseUrl}/api/precourse/register`, {
         ...formData,
@@ -59,8 +64,7 @@ export default function PreRegisterForm({ courseId, onClose }) {
       });
   
       toast.success(res.data.message || "Успешная регистрация!");
-      setSubmitted(true); // <-- Set submission state to true
-  
+      setSubmitted(true);
       setFormData({
         firstName: "",
         middleName: "",
@@ -68,12 +72,14 @@ export default function PreRegisterForm({ courseId, onClose }) {
         email: "",
         phone: "",
       });
-  
       setAgreements({ terms: false, data: false, promotions: false });
     } catch (err) {
       toast.error(err.response?.data?.message || "Ошибка при отправке формы.");
+    } finally {
+      setLoading(false); // Stop loading regardless of success or error
     }
   };
+  
   
 
   const renderLabelWithHTML = (htmlContent) => {
@@ -93,7 +99,7 @@ export default function PreRegisterForm({ courseId, onClose }) {
         <button className="close-btn" onClick={onClose}>
           <AiOutlineClose size={24} />
         </button>
-        <h2>Предварительная регистрация</h2>
+        <h2>Пре-Регистрация на XI EAFO Базовые медицинские курсы</h2>
 
         {!submitted ? (
     <form onSubmit={handleSubmit}>
@@ -198,14 +204,15 @@ export default function PreRegisterForm({ courseId, onClose }) {
     </div>
 
     <button
-      className="cursor-pointer"
-      type="submit"
-      disabled={
-        !(agreements.terms && agreements.data && agreements.promotions)
-      }
-    >
-      Отправить
-    </button>
+  className="cursor-pointer"
+  type="submit"
+  disabled={
+    loading || !(agreements.terms && agreements.data && agreements.promotions)
+  }
+>
+  {loading ? "Отправка..." : "Отправить"}
+</button>
+
   </form>
 ) : (
   <div className="success-message">
