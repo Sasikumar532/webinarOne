@@ -61,6 +61,7 @@ export default function PreRegisterForm({ courseId, onClose }) {
       const res = await axios.post(`${baseUrl}/api/precourse/register`, {
         ...formData,
         courseId,
+        language: "ru" // Add language parameter here
       });
   
       toast.success(res.data.message || "Успешная регистрация!");
